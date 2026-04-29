@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Simple Website</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <body class="light-theme"></body>
+    
+    <h1>Task List</h1>
+    
+    <p id="msg">Current Tasks:</p>
+    
+    <ul>
+        
+        <li class="list">Add visual effects</li>
+        
+        <li class="list">Add dark themes</li>
+        
+        <li class="list">Make a button to change the background color</li>
+    
+    </ul>
+    
+    <script src="app.js"></script>
+    
+    <noscript>You need to enable JavaScript to view the full website</noscript>
+    
+    <button class="btn">Dark</button>
+
+</body>
+
+</html>
