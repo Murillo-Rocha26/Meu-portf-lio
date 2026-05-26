@@ -1,67 +1,47 @@
-* {
-    color: var(--fontColor);
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 body {
-    background: var(--bg);
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(79,70,229,0.35), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(34,211,238,0.25), transparent 30%),
+    linear-gradient(135deg, #0F172A, #111827);
+
+  color: #E5E7EB;
 }
 
-/* Listas */
-ul {
-    font-family: Helvetica, Arial, sans-serif;
+.glow {
+  position: fixed;
+
+  width: 250px;
+  height: 200px;
+
+ background: radial-gradient(
+    circle,
+    rgba(79,70,229,0.22) 0%,
+    rgba(99,102,241,0.2) 35%,
+    rgba(34,211,238,0.08) 55%,
+    transparent 75%
+  );
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  transform: translate(-50%, -50%);
+
+  will-change: transform;
+
+  z-index: 9999;
+
+  filter: blur(50px);
+}; 
+
+
+.card {
+  position: relative;
+  background: #222;
+  padding: 20px;
+  border-radius: 100px;
+  width: 100vh;
+
 }
 
-li {
-    list-style: circle;
-}
-
-.list {
-    list-style: square;
-}
-
-/* Mensagem */
-#msg {
-    font-family: monospace;
-}
-
-/* Variáveis */
-:root {
-    --green: #00FF00;
-    --white: #ffffff;
-    --black: #000000;
-}
-
-/* Tema claro */
-.light-theme {
-    --bg: var(--white);
-    --fontColor: var(--black);
-    --btnBg: var(--black);        /* corrigido */
-    --btnFontColor: var(--white);
-}
-
-/* Tema escuro */
-.dark-theme {
-    --bg: var(--black);
-    --fontColor: var(--green);
-    --btnBg: var(--white);        /* corrigido */
-    --btnFontColor: var(--black);
-}
-
-/* Botão */
-.btn {
-    position: absolute;
-    top: 20px;
-    left: 200px;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    border: none;
-    color: var(--btnFontColor);
-    background-color: var(--btnBg);
-    cursor: pointer;
-}
-
-.btn:focus {
-    outline-style: none;
-}
