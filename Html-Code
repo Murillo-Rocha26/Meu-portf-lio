@@ -1,34 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Simple Website</title>
-    <link rel="stylesheet" href="Style.css">
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <body class="light-theme"></body>
-    
-    <h1>Task List</h1>
-    
-    <p id="msg">Current Tasks:</p>
-    
-    <ul>
-        
-        <li class="list">Add visual effects</li>
-        
-        <li class="list">Add dark themes</li>
-        
-        <li class="list">Make a button to change the background color</li>
-    
-    </ul>
-    
+
+    <div class="glow"></div>
+
+    <header>
+        <h1>Murillo Rocha Robaina</h1>
+        <p>Dev junior</p>
+    </header>
+
+    <section>
+        <h2>Projeto em Python</h2>
+
+        <div class="card">
+            <p>Programador junior</p>
+        </div>
+    </section>
+
     <script src="app.js"></script>
-    
-    <noscript>You need to enable JavaScript to view the full website</noscript>
-    
-    <button class="btn">Dark</button>
-
 </body>
-
 </html>
