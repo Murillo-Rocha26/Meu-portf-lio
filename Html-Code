@@ -12,28 +12,28 @@
     <div class="glow"></div>
 
     <header>
-        <h1>Murillo Rocha Robaina</h1>
-        <p>Dev junior</p>
+        <div class="titulo">
+            <h1>Murillo Rocha Robaina</h1>
+            <h2>Dev junior</h2>
+        </div>
     </header>
 
 
     <section>
         <h2>Projeto em Python</h2>
-        <div class="card" style="width: 18rem;">
-            <img src="https://camo.githubusercontent.com/ec4c077f161d6bb235895c53005f5134c56148fe279c93bfbaea85fe277e9ce3/68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d7079" class="card-img-top" alt="Python">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-            </div>
-        </div>
     </section>
 
     <section>
-        <div class="Img">
-            <img src="https://skillicons.dev/icons?i=html" alt="HTML"/>
-            <img src="https://skillicons.dev/icons?i=css" alt="CSS"/>
-            <img src="https://skillicons.dev/icons?i=c" alt="C"/>
-            <img src="https://camo.githubusercontent.com/ec4c077f161d6bb235895c53005f5134c56148fe279c93bfbaea85fe277e9ce3/68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d7079"  alt="Python">
+
+        <div class="card">
+            <div class="Img">
+                <img src="https://skillicons.dev/icons?i=html" alt="HTML"/>
+                <img src="https://skillicons.dev/icons?i=css" alt="CSS"/>
+                <img src="https://skillicons.dev/icons?i=c" alt="C"/>
+                <img src="https://camo.githubusercontent.com/ec4c077f161d6bb235895c53005f5134c56148fe279c93bfbaea85fe277e9ce3/68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d7079"  alt="Python">
+            </div>
         </div>
+    
     </section>
 
     <script src="app.js"></script>
