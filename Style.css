@@ -33,14 +33,24 @@ body {
   z-index: 9999;
 
   filter: blur(50px);
-}; 
+}
 
+.card-img-top{
+  background-color: #0F172A;
+  display: block;
+  margin: 0 auto;
+}
 
-.card {
-  position: relative;
-  background: #222;
-  padding: 20px;
-  border-radius: 100px;
-  width: 100vh;
+.card-body {
+  background-color: #E5E7EB;
+  width: 18rem;
+}
 
+.Img {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0;
+  display: block;
 }
