@@ -18,14 +18,9 @@
         </div>
     </header>
 
-
-    <section>
-        <h2>Projeto em Python</h2>
-    </section>
-
     <section>
 
-        <div class="card">
+        <div class="card active">
             <div class="Img">
                 <img src="https://skillicons.dev/icons?i=html" alt="HTML"/>
                 <img src="https://skillicons.dev/icons?i=css" alt="CSS"/>
@@ -33,7 +28,15 @@
                 <img src="https://camo.githubusercontent.com/ec4c077f161d6bb235895c53005f5134c56148fe279c93bfbaea85fe277e9ce3/68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d7079"  alt="Python">
             </div>
         </div>
-    
+        
+        <div class="card">
+            <img src="https://skillicons.dev/icons?i=vscode" alt="Vs Code"/>
+            <img src="https://skillicons.dev/icons?i=cpp" alt="C++"/>
+            <img src="https://skillicons.dev/icons?i=anaconda" alt="Jupyter Notebook"/>
+        </div>
+
+        <button id="next">➡</button>
+
     </section>
 
     <script src="app.js"></script>
