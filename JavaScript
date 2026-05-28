@@ -4,3 +4,18 @@ document.addEventListener("mousemove", (e) => {
   glow.style.left = e.clientX + "px";
   glow.style.top = e.clientY + "px";
 });
+
+const card = document.querySelector(".card");
+
+const nextBtn = document.querySelector("#next");
+
+let current = 0;
+
+nextBtn.addEventListener("click", () => {
+  card[current].classlist.remove("active");
+
+  current++;
+  if (current >= cards.length) current = 0;
+  
+  cards[current].classlist.add("active");
+});
