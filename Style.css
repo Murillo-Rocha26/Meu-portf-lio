@@ -103,3 +103,26 @@ main {
 .Img img:hover {
   transform: scale(1.12);
 }
+
+#next {
+  padding: 12px 18px;
+  font-size: 24px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: rgba(79, 70, 229, 0.25);
+  color: #E5E7EB;
+  transition: all 0.3s ease;
+}
+
+#next:hover {
+  background: rgba(79, 70, 229, 0.45);
+  transform: scale(1.05);
+}
+.container {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+  justify-content: center;
+  margin-top: 60px;
+}
