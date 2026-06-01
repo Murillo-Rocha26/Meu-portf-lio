@@ -18,9 +18,9 @@
         </div>
     </header>
 
-    <section>
+    <section class="container">
 
-        <div class="card active">
+        <div class="card active" id="card1">
             <div class="Img">
                 <img src="https://skillicons.dev/icons?i=html" alt="HTML"/>
                 <img src="https://skillicons.dev/icons?i=css" alt="CSS"/>
@@ -29,7 +29,7 @@
             </div>
         </div>
         
-        <div class="card">
+        <div class="card" id="card2">
             <img src="https://skillicons.dev/icons?i=vscode" alt="Vs Code"/>
             <img src="https://skillicons.dev/icons?i=cpp" alt="C++"/>
             <img src="https://skillicons.dev/icons?i=anaconda" alt="Jupyter Notebook"/>
