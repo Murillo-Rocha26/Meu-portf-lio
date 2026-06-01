@@ -1,10 +1,8 @@
 body {
   margin: 0;
   min-height: 100vh;
-
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 
   background:
     radial-gradient(circle at top left, rgba(79,70,229,0.35), transparent 30%),
@@ -12,6 +10,15 @@ body {
     linear-gradient(135deg, #0F172A, #111827);
 
   color: #E5E7EB;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  flex: 1;
 }
 
 .glow {
@@ -52,24 +59,33 @@ main {
 
 .card {
   width: fit-content;
-
-  margin: 30px auto;
-
   padding: 20px 40px;
-
   background: rgba(79, 70, 229, 0.12);
-
   border: 1px solid rgba(99, 102, 241, 0.18);
-
   border-radius: 24px;
-
   backdrop-filter: blur(10px);
-
   box-shadow:
     0 0 10px rgba(79,70,229,0.12),
     0 0 20px rgba(34,211,238,0.05);
-
   transition: all 0.3s ease;
+  display: none;
+}
+
+.card.active {
+  display: flex;
+  align-items: center;
+  animation: fadeIn 0.4 ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .card:hover {
@@ -117,12 +133,14 @@ main {
 
 #next:hover {
   background: rgba(79, 70, 229, 0.45);
-  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(79,70,229,0.4);
 }
+
 .container {
-  display: flex;
-  align-items: center;
-  gap: 20px; 
-  justify-content: center;
-  margin-top: 60px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
+
+
