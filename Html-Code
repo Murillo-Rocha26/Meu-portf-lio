@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont/tabler-icons.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,21 +21,43 @@
     <section class="container">
 
         <div class="card active" id="card1">
-            <div class="Img">
-                <img src="https://skillicons.dev/icons?i=html" alt="HTML"/>
-                <img src="https://skillicons.dev/icons?i=css" alt="CSS"/>
-                <img src="https://skillicons.dev/icons?i=c" alt="C"/>
-                <img src="https://camo.githubusercontent.com/ec4c077f161d6bb235895c53005f5134c56148fe279c93bfbaea85fe277e9ce3/68747470733a2f2f736b696c6c69636f6e732e6465762f69636f6e733f693d7079"  alt="Python">
+            <div class="card-inner">
+                <div class="card-icons">
+                    <div class="icon-wrap" data-tooltip="Home">
+                        <i class="ti ti-home" aria-label="Home"></i>
+                    </div>
+                    <div class="icon-wrap active-icon" data-tooltip="About">
+                        <i class="ti ti-user" aria-label="Perfil"></i>
+                    </div>
+                    <div class="icon-wrap" data-tooltip="Contact">
+                        <i class="ti ti-mail" aria-label="Contato"></i>
+                    </div>
+                    <div class="icon-wrap" data-tooltip="Projects">
+                        <i class="ti ti-layout-dashboard" aria-label="Projetos"></i>
+                    </div>
+                    <div class="icon-wrap" data-tooltip="Skills">
+                        <i class="ti ti-columns" aria-label="Skills"></i>
+                    </div>
+                </div>
+                <button id="next" title="Próximo"><i class="ti ti-arrow-right"></i></button>
             </div>
         </div>
-        
-        <div class="card" id="card2">
-            <img src="https://skillicons.dev/icons?i=vscode" alt="Vs Code"/>
-            <img src="https://skillicons.dev/icons?i=cpp" alt="C++"/>
-            <img src="https://skillicons.dev/icons?i=anaconda" alt="Jupyter Notebook"/>
-        </div>
 
-        <button id="next">➡</button>
+        <div class="card" id="card2">
+            <div class="card-inner">
+                <div class="card-icons">
+                    <div class="icon-wrap" data-tooltip="Profile">
+                        <button class="click" onclick= "AbrirNovaJanela()">
+                            <i class="ti ti-brand-github" aria-label="GitHub"></i>
+                        </button>
+                    </div>
+                    <div class="icon-wrap" data-tooltip="CV">
+                        <i class="ti ti-file-cv" aria-label="Currículo"></i>
+                    </div>
+                </div>
+                <button id="prev" title="Anterior"><i class="ti ti-arrow-left"></i></button>
+            </div>
+        </div>
 
     </section>
 
