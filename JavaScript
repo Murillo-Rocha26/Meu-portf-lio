@@ -1,6 +1,11 @@
 const glow = document.querySelector(".glow");
 const cards = document.querySelectorAll(".card");
 const nextBtn = document.querySelector("#next");
+const prevBtn = document.querySelector("#prev");
+
+function AbrirNovaJanela(){
+  window.open("https://github.com/Murillo-Rocha26", "_blank");
+}
 
 document.addEventListener("mousemove", (e) => {
   glow.style.left = e.clientX + "px";
@@ -9,13 +14,20 @@ document.addEventListener("mousemove", (e) => {
 
 let current = 0;
 
-nextBtn.addEventListener("click", () => {
+function goTo(index) {
   cards[current].classList.remove("active");
-  current = (current + 1) % cards.length;
-
+  current = (index + cards.length) % cards.length;
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
       cards[current].classList.add("active");
     });
   });
-});
+}
+
+if (nextBtn) {
+  nextBtn.addEventListener("click", () => goTo(current + 1));
+}
+
+if (prevBtn) {
+  prevBtn.addEventListener("click", () => goTo(current - 1));
+}
