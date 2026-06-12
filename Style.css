@@ -247,3 +247,31 @@ header {
 .icon-wrap:hover .click i {
     color: #fff;
 }
+
+/* conteúdo sobre mim */
+.about-content {
+  font-size: 15px;
+  position: fixed;
+  top: 40%;
+  left: 10%;
+  transform: translateY(-50%);
+  text-align: left;
+  width: 40%;
+  max-width: 500px;
+  color: #94A3B8;
+  line-height: 1.6;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.about-content p {
+  border-right: 2px solid #94A3B8;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
