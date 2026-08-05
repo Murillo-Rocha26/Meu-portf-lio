@@ -1,9 +1,36 @@
+<!--portfolio/
+├── index.html
+├── about.html
+├── css/
+│   ├── style.css       → estilos globais (body, glow, header)
+│   ├── navbar.css      → card, icon-wrap, botões seta
+│   ├── animations.css  → keyframes (fadeSlideIn, blink, typing)
+│   ├── home.css        → home-content, greeting, nome, role
+│   └── about.css       → about-content
+├── app.js
+    Fazer isso depois-->
+<!--Importar CSS
+/* style.css */
+@import url('./about.css');
+@import url('./home.css');
+@import url('./animations.css');-->
+
+<!--<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="animations.css">
+</head> Exemplos de links-->
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Murillo Rocha</title>
+    <title>Murillo Rocha Robaina</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont/tabler-icons.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,15 +41,18 @@
     <header>
         <div class="titulo">
             <h1>Murillo Rocha Robaina</h1>
-            <h2>Sobre mim</h2>
+            <h2>Dev junior</h2>
         </div>
     </header>
 
-    <main class="about-content">
-        <p>Contacts</p>
+    <main class="home-content">
+        <p class="greeting">Olá, eu me</p>
+        <h1 class="my-name">chamo Murillo Rocha Robaina</h1>
+        <p class="role" id="typewriter"></p>
     </main>
 
     <section class="container">
+
         <div class="card active" id="card1">
             <div class="card-inner">
                 <div class="card-icons">
@@ -50,17 +80,20 @@
             <div class="card-inner">
                 <div class="card-icons">
                     <div class="icon-wrap" data-tooltip="Profile">
-                        <button class="click" onclick="AbrirNovaJanela()">
+                        <button class="click" onclick= "AbrirNovaJanela()">
                             <i class="ti ti-brand-github" aria-label="GitHub"></i>
                         </button>
                     </div>
                     <div class="icon-wrap" data-tooltip="CV">
-                        <i class="ti ti-file-cv" aria-label="Currículo"></i>
+                        <button class="click" onclick="AbrirJanela()">
+                            <i class="ti ti-file-cv" aria-label="Currículo"></i>
+                        </button>
                     </div>
                 </div>
                 <button id="prev" title="Anterior"><i class="ti ti-arrow-left"></i></button>
             </div>
         </div>
+
     </section>
 
     <script src="app.js"></script>
