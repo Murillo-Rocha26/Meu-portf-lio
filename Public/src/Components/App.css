@@ -275,3 +275,44 @@ header {
 @keyframes blink {
   50% { border-color: transparent }
 }
+
+
+/* VERIFICAR SE ESTÁ CORRETO */
+
+
+
+
+
+.home-content {
+  position: fixed;
+  top: 45%;
+  left: 10%;
+  transform: translateY(-50%);
+  text-align: left;
+}
+
+.greeting {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(148, 163, 184, 0.7);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.nome {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #F1F5F9;
+  letter-spacing: -1px;
+  margin-bottom: 12px;
+}
+
+.role {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #A5B4FC;
+  border-right: 2px solid #A5B4FC;
+  animation: blink 0.7s step-end infinite;
+  min-height: 1.5em;
+} 
