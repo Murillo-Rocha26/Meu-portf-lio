@@ -11,6 +11,37 @@ const routes = {
   skills: 'skills.html'
 };
 
+/// O colchetes [] fazem função de um array ( lista de itens )
+const frase = ["Estagiando em T.I .Futuro Engenheiro de Software. Apaixonado por tecnologia"]
+//                  1 frase           2 frase                       3 frase
+// frases.length 3
+const el = document.querySelector("typewriter")
+
+if (el) {
+  let fraseIndex = 0; // fraseIndex mostra qual frase será apresentada
+  let charIndex = 0; // CharIndex mostra a ordem, por exemplo "Dev Junior" ----- 1 elemento: "" , 2 elemento "D" , 3 elemento "De" e assim vai...
+  let apagando = false; // Retorna o valor em falso onde não vai apagar
+
+  setInterval(() => {
+    const frase = frases[fraseIndex];
+
+    if (!apagando) {
+      typewriter.textContent = frase.slice(0, charIndex++);
+      if (charIndex > frase.length){
+      apagando = true;
+     setInterval (() => {}, 1000);}
+    }
+      else {
+      typewriter.textContent = frase.slice(0, charIndex--);
+      if (charIndex < 0) {
+        apagando = false;
+        fraseIndex = (fraseIndex + 1) % frases.length; // O length significa a quantidade de itens no array
+      }                             // o % assim como em linguagem C significa módulo que é o resto da última frase
+    }
+  }, 80) // o 80 significa o tempo da animação
+}
+
+/// A crase `` usa para colocar textos grandes/normais
 const texto = `Tenho 18 anos e atualmente curso Engenharia de Software no Centro Universitário ENIAC, estando no 1º semestre. Sou formado pelo Colégio Presbiteriano Bilíngue, com nível avançado de inglês e conhecimento básico de espanhol.
   
 Possuo 6 anos de experiência em vendas e atendimento ao cliente, desenvolvendo habilidades de comunicação, negociação e relacionamento com o público.
