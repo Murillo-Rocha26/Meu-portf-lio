@@ -15,9 +15,9 @@ const routes = {
 const frase = ["Estagiando em T.I .Futuro Engenheiro de Software. Apaixonado por tecnologia"]
 //                  1 frase           2 frase                       3 frase
 // frases.length 3
-const el = document.querySelector("typewriter")
+const elTypewriter = document.querySelector("typewriter")
 
-if (el) {
+if (elTypewriter) {
   let fraseIndex = 0; // fraseIndex mostra qual frase será apresentada
   let charIndex = 0; // CharIndex mostra a ordem, por exemplo "Dev Junior" ----- 1 elemento: "" , 2 elemento "D" , 3 elemento "De" e assim vai...
   let apagando = false; // Retorna o valor em falso onde não vai apagar
@@ -47,11 +47,11 @@ const texto = `Tenho 18 anos e atualmente curso Engenharia de Software no Centro
 Possuo 6 anos de experiência em vendas e atendimento ao cliente, desenvolvendo habilidades de comunicação, negociação e relacionamento com o público.
   
 Na área de tecnologia, tenho conhecimentos em Python, C, HTML e CSS, com maior domínio da linguagem Python. Atualmente, trabalho na empresa H2M Águas, atuando na área de vendas.`;
-const el = document.querySelector(".about-content p");
+const elAbout = document.querySelector(".about-content p");
 
-if (el) {
+if (elAbout) {
 
-  el.textContent ="";
+  elAbout.textContent ="";
   let i = 0;
   const intervalo = setInterval(() => {
     el.textContent += texto[i];
