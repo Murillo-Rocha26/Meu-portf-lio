@@ -17,6 +17,32 @@ const frase = ["Estagiando em T.I .Futuro Engenheiro de Software. Apaixonado por
 // frases.length 3
 const elTypewriter = document.querySelector("typewriter")
 
+const titulo = ["Sobre mim..."] /// animação de frases ONDE EU PAREI
+
+const elTitle = document.querySelector("title")
+
+if (elTitle) {
+  let tituloIndex = 0;
+  let chaIndex = 0;
+  let apagando = false;
+
+  setInterval(() => {
+    const titulo = titles[titleIndex]
+
+    if (!apagando) {
+      elTitle.textContent = titulo.slice(0, charIndex++)
+      if (charIndex > titulo.length){
+        apagando = true;
+        setInterval(() => {}, 100);}
+    }
+    else {
+      elTitle.textContent = titulo.slice(0, charIndex--)
+      apagando = false;
+      tituloIndex = (tituloIndex + 1) % titulos.length;
+    }
+  })
+}
+
 if (elTypewriter) {
   let fraseIndex = 0; // fraseIndex mostra qual frase será apresentada
   let charIndex = 0; // CharIndex mostra a ordem, por exemplo "Dev Junior" ----- 1 elemento: "" , 2 elemento "D" , 3 elemento "De" e assim vai...
@@ -26,13 +52,13 @@ if (elTypewriter) {
     const frase = frases[fraseIndex];
 
     if (!apagando) {
-      typewriter.textContent = frase.slice(0, charIndex++);
+      elTypewriter.textContent = frase.slice(0, charIndex++);
       if (charIndex > frase.length){
       apagando = true;
      setInterval (() => {}, 1000);}
     }
       else {
-      typewriter.textContent = frase.slice(0, charIndex--);
+      elTypewriter.textContent = frase.slice(0, charIndex--);
       if (charIndex < 0) {
         apagando = false;
         fraseIndex = (fraseIndex + 1) % frases.length; // O length significa a quantidade de itens no array
@@ -54,11 +80,11 @@ if (elAbout) {
   elAbout.textContent ="";
   let i = 0;
   const intervalo = setInterval(() => {
-    el.textContent += texto[i];
+    elAbout.textContent += texto[i];
     i++;
     if (i>=texto.length) {
       clearInterval(intervalo);
-      el.style.borderRight = "none";
+      elAbout.style.borderRight = "none";
     }
   }, 40);
 }
